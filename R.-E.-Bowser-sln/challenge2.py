@@ -13,13 +13,13 @@ def f(D):
         run_score = round((100-run_percentage)/10) if (run_percentage >= 0 and run_percentage <= 10) else (math.floor((99-run_percentage)/10) if
                                                                                                           run_percentage >= 11 and run_percentage <= 79 else 1)
         score = run_score + acc_score
-        time = team['Submission_time'].strftime("%Y-%m-%d %H:%M:%S")
+        time = team['Submission_time'].strftime("%d-%m-%y %H:%M:%S")
         dt = datetime.datetime(2024, 4, 23, 10, 15)
         output.append({
             'Team_name': team['Team_name'],
             'Score': score,
-            'Submission time': time
+            'Submission_time': time
         })
 
-    output = sorted(output, key = lambda x: (-x['Score'], x['Submission time'])) # sort in decreasing order by score, but break ties with submission time
+    output = sorted(output, key = lambda x: (-x['Score'], x['Submission_time'])) # sort in decreasing order by score, but break ties with submission time
     return output
