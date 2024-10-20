@@ -7,6 +7,7 @@ def f(D):
     fastest_time = sorted_data[0]['Running_time']
     slowest_time = sorted_data[-1]['Running_time']
     max_diff = slowest_time - fastest_time
+    sorted_data.clear()
     for team in data:
         acc_score = math.ceil(team['Accuracy'] / 10)
         run_percentage = math.floor(((team['Running_time']-fastest_time)/max_diff)*100)
@@ -21,5 +22,5 @@ def f(D):
             'Submission_time': time
         })
 
-    output = sorted(output, key = lambda x: (-x['Score'], x['Submission_time']))
+    output = sorted(output, key = lambda x: (-x['Score'], x['Submission_time'])) # sort in decreasing order by score, but break ties with submission time
     return output
