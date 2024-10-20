@@ -21,5 +21,5 @@ def f(D):
             'Submission time': time
         })
 
-    output = sorted(output, key = lambda x: (-x['Score'], x['Submission time']))
+    output = sorted(output, key = lambda x: (-x['Score'], x['Submission time'])) # sort in decreasing order by score, but break ties with submission time
     return output
