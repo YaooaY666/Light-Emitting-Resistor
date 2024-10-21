@@ -1,5 +1,3 @@
-
-
 class Treasure:
     size = 0
 
@@ -49,7 +47,7 @@ class Treasure:
         if (self.value == val):
             if (self.collection > 0):
                 price = self.price()
-                if (price >= 30 & price <= 120):
+                if (price >= 30 and price <= 120):
                     print(chr(price), end="")
                 self.collection -= 1
                 return price
@@ -110,9 +108,7 @@ treasure_tree.dig_treasure()
 # treasure_tree.price_table()
 # treasure_tree.print_all()
 
-shopping_list = [12, 31, 50, 90, 58, 9, 54, 55, 7, 8, 13, 43, 66, 102, 13, 98, 67, 58, 1, 49]
+shopping_list = [102, 31, 50, 90, 58, 54, 55, 13, 43, 66, 102, 13, 98, 67, 58, 1, 49]
 
 for treasure in shopping_list:
     treasure_tree.buy_treasure(treasure)
-
-"""3,  """
