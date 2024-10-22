@@ -1,3 +1,5 @@
+# Challenge 2: Mini Snake
+
 For a problem solving task, this task was quite fun, and more so the challenge to make it as short as possible in terms of file size. The solution is as follows. 
 
 Solution.
